@@ -10,7 +10,7 @@ def main():
     for i in range(0, 3):
         rand_num = random.randint(0, 50)
         count = 0
-        for i in range(1, rand_num+1):
+        for i in range(1, rand_num + 1):
             if rand_num % i == 0:
                 count += 1
         if count == 2:
@@ -19,7 +19,7 @@ def main():
             correct_ans = 'no'
         print(f'Question: {rand_num}')
         answer = get_answer()
-        comp_response = compare_answer(answer, correct_ans)
+        comp_response = compare_answer(answer, correct_ans, name)
         if comp_response:
             pass
         else:

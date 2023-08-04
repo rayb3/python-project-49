@@ -14,7 +14,7 @@ def main():
         else:
             correct_ans = 'no'
         answer = get_answer()
-        comp_response = compare_answer(answer, correct_ans)
+        comp_response = compare_answer(answer, correct_ans, name)
         if comp_response:
             pass
         else:

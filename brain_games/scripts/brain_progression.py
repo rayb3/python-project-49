@@ -5,10 +5,10 @@ from brain_games.main_func import welcome_user, get_answer, compare_answer
 
 def main():
     name = welcome_user()
-    print('Find the greatest common divisor of given numbers.')
+    print('What number is missing in the progression?')
     for i in range(0, 3):
         list_len = random.randint(5, 10)
-        hidden_num = random.randint(0, list_len-1)
+        hidden_num = random.randint(0, list_len - 1)
         ar_list = []
         num = 0
         for i in range(0, list_len):
@@ -19,7 +19,7 @@ def main():
         ar_str = (' '.join(str(x) for x in ar_list))
         print(f'Question: {ar_str}')
         answer = get_answer()
-        comp_response = compare_answer(answer, correct_ans)
+        comp_response = compare_answer(answer, correct_ans, name)
         if comp_response:
             pass
         else:

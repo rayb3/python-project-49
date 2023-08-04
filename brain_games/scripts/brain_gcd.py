@@ -15,14 +15,14 @@ def main():
         else:
             lowest_num = second_num
         divider = 1
-        while lowest_num+1 != divider:
+        while lowest_num + 1 != divider:
             if (first_num % divider == 0) and (second_num % divider == 0):
                 divider_ans = divider
                 divider += 1
             else:
                 divider += 1
         answer = get_answer()
-        comp_response = compare_answer(answer, divider_ans)
+        comp_response = compare_answer(answer, divider_ans, name)
         if comp_response:
             pass
         else:

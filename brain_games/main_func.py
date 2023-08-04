@@ -13,10 +13,11 @@ def get_answer():
     return answer
 
 
-def compare_answer(answer, correct_ans):
+def compare_answer(answer, correct_ans, name):
     if answer != str(correct_ans):
         print(f"'{answer}' is wrong answer ;(. "
               f"Correct answer was '{correct_ans}'")
+        print(f"Let's try again, {name}!")
         return False
     else:
         print('Correct!')
