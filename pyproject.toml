@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "training project for hexlet"
+classifiers = ["Topic :: Education :: Testing"]
 authors = ["reajl <reajl@bk.ru>"]
+repository = "https://github.com/Reajl/python-project-49"
 readme = "README.md"
 packages = [
     {include = "brain_games"}

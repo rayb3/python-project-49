@@ -1,29 +1,11 @@
 #!/usr/bin/env python3
-import random
-from brain_games.main_func import welcome_user, get_answer, compare_answer
+from brain_games.main_function import start_game
+from brain_games.games import calc
 
 
 def main():
-    name = welcome_user()
-    print('What is the result of the expression?')
-    for i in range(0, 3):
-        first_num = random.randint(0, 50)
-        second_num = random.randint(0, 50)
-        operator = random.choice(['+', '-', '*'])
-        if operator == '+':
-            correct_ans = first_num + second_num
-        elif operator == '-':
-            correct_ans = first_num - second_num
-        else:
-            correct_ans = first_num * second_num
-        print(f'Question: {first_num} {operator} {second_num}')
-        answer = get_answer()
-        comp_response = compare_answer(answer, correct_ans, name)
-        if comp_response:
-            pass
-        else:
-            return
-    print(f'Congratulations, {name}!')
+
+    start_game(calc)
 
 
 if __name__ == "__main__":
